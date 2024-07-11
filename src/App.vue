@@ -1,26 +1,43 @@
+<!-- src/App.vue -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  <div>
+    <login />
+    <notification />
+    <testimonial />
+    <reports />
+    
+  </div>
+  </template>
+  
+  
+  <script>
+  import login from './components/login.vue';
+  import notification from './components/notification.vue';
+  import testimonial from './components/testimonial.vue';
+  import reports from './components/reports.vue';
+  
+  
+  
+  export default {
+    name: 'App',
+    components: {
+      login,
+      notification,
+      testimonial,
+      reports
+      
+    },
+    methods: {
+      togglePasswordVisibility() {
+        this.isPasswordVisible = !this.isPasswordVisible;
+      }
+    }
+  
+  };
+  
+  </script>
+  
+  <style >
+  
+  </style>
+  
